@@ -3303,7 +3303,7 @@ class PlayState extends MusicBeatState
 		paused = true;
 		cancelMusicFadeTween();
 		MusicBeatState.switchState(new ChartingState());
-		chartingMode = true;
+		chartingMode = false;
 
 		#if desktop
 		DiscordClient.changePresence("Chart Editor", null, null, true);
