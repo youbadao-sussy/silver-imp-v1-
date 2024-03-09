@@ -967,6 +967,13 @@ class PlayState extends MusicBeatState
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
+		colorShaderDad = new ColorShader(1);
+		add(colorShaderDad);
+		colorShaderBoyfriend = new ColorShader(1);
+		add(colorShaderBoyfriend);
+
+		dad.shader = colorShaderDad.shader;
+		boyfriend.shader = colorShaderBoyfriend.shader;
 
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if(gf != null)
